@@ -10,7 +10,7 @@ int start_vars(vars *var)
 	var->file = NULL;
 	var->buff = NULL;
 	var->tmp = 0;
-	var->dict = create_instru();
+	var->dict = create_instructions();
 	if (var->dict == NULL)
 		return (EXIT_FAILURE);
 	var->head = NULL;
@@ -21,10 +21,10 @@ int start_vars(vars *var)
 }
 
 /**
- * create_instru - Create new functions dictionary
+ * create_instructions - Create new functions dictionary
  * Return: Dictionary pointer
  */
-instruction_t *create_instru()
+instruction_t *create_instructions()
 {
 	instruction_t *ptr = malloc(sizeof(instruction_t) * 18);
 
