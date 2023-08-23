@@ -1,5 +1,7 @@
 #include "monty.h"
 
+vars var;
+
 /**
  * main - Start LIFO, FILO program
  * @ac: Number of arguments
@@ -9,8 +11,7 @@
 int main(int ac, char **av)
 {
 	char *opcode;
-	ssize_t read_line = 1;
-	var = {NULL, NULL, 0, NULL, NULL, 0, 0}
+
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -28,9 +29,8 @@ int main(int ac, char **av)
 		return (EXIT_FAILURE);
 	}
 
-	while (read_line != EOF)
+	while (getline(&var.buff, &var.tmp, var.file) != EOF)
 	{
-		read_line = getline(&var.buff, &var.tmp, var.file);
 		opcode = strtok(var.buff, " \r\t\n");
 		if (opcode != NULL)
 			if (call_funct(&var, opcode) == EXIT_FAILURE)
