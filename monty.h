@@ -70,7 +70,7 @@ extern vars var;
 
 int set_gvars(vars *);
 instruction_t *create_instructions();
-int call_funct(vars *, char *);
+int exec(vars *, char *);
 void free_all(void);
 int _isdigit(char *);
 

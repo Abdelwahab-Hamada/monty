@@ -51,7 +51,7 @@ instruction_t *create_instructions()
  * @opcode: Command to execute
  * Return: None
  */
-int call_funct(vars *var, char *opcode)
+int exec(vars *var, char *opcode)
 {
 	int i;
 
