@@ -54,7 +54,7 @@ typedef struct instruction_s
  * @line_number: Stores file current line
  * @MODE: Program configuration stack or queue
  */
-typedef struct glob_var
+typedef struct gvars
 {
 	FILE *file;
 	char *buff;
@@ -68,14 +68,14 @@ typedef struct glob_var
 
 extern vars var;
 
-int start_vars(vars *var);
+int start_vars(vars *);
 instruction_t *create_instru();
-int call_funct(vars *var, char *opcode);
+int call_funct(vars *, char *);
 void free_all(void);
-int _isdigit(char *string);
+int _isdigit(char *);
 
-void pall(stack_t **stack, unsigned int line_number);
-void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **, unsigned int);
+void push(stack_t **, unsigned int);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 
