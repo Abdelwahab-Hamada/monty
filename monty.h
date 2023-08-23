@@ -76,10 +76,10 @@ int _isdigit(char *);
 
 void pall(stack_t **, unsigned int);
 void push(stack_t **, unsigned int);
-void pint(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
+void pint(stack_t **, unsigned int);
+void pop(stack_t **, unsigned int);
 
-void swap(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
+void swap(stack_t **, unsigned int);
+void add(stack_t **, unsigned int);
 
 #endif
