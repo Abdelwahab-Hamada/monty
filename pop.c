@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
-* pop - Delete top of list
-* @stack: Double linked list
-* @line_number: File line execution
+* pop - remove head
+* @stack: dll
+* @line_number: state
 */
 void pop(stack_t **stack, unsigned int line_number)
 {

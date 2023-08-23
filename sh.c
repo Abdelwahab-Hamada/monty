@@ -21,8 +21,8 @@ int set_gvars(vars *var)
 }
 
 /**
- * create_instructions - Create new functions dictionary
- * Return: Dictionary pointer
+ * create_instructions - commands
+ * Return: pointers
  */
 instruction_t *create_instructions()
 {
@@ -46,10 +46,10 @@ instruction_t *create_instructions()
 }
 
 /**
- * call_funct - Call Functions
- * @var: Global variables
- * @opcode: Command to execute
- * Return: None
+ * exec - run methods
+ * @var: gvars
+ * @opcode: cmd
+ * Return: exit code
  */
 int exec(vars *var, char *opcode)
 {
@@ -75,8 +75,8 @@ int exec(vars *var, char *opcode)
 
 
 /**
- * free_all - Clean all program mallocs
- * Return: None
+ * free_all - free memory
+ *
  */
 void free_all(void)
 {
@@ -97,8 +97,8 @@ void free_all(void)
 }
 
 /**
- * _isdigit - Clean all program mallocs
- * @string: Num to validate
+ * _isdigit - self explained
+ * @string: as above
  * Return: 0 Success, 1 Failed
  */
 int _isdigit(char *string)

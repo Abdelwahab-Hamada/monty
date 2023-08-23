@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * pall - Print list
- * @stack: Double linked list
- * @line_number: File line execution
+ * pall - print all
+ * @stack: doubly ll
+ * @line_number: state
  */
 void pall(stack_t **stack, unsigned int line_number)
 {

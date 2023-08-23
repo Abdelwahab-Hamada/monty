@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * pint - Print last node
- * @stack: Double linked list
- * @line_number: File line execution
+ * pint - print tail
+ * @stack: dll
+ * @line_number: state
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
