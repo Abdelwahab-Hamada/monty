@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * start_vars - Fake rand to jackpoint Giga Millions
- * @var: Global variables to initialize
+ * set_gvars - gvars
+ * @var: variable
  * Return: 0 Success, 1 Failed
  */
-int start_vars(vars *var)
+int set_gvars(vars *var)
 {
 	var->file = NULL;
 	var->buff = NULL;

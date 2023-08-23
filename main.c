@@ -3,9 +3,9 @@
 vars var;
 
 /**
- * main - Start LIFO, FILO program
- * @ac: Number of arguments
- * @av: Pointer containing arguments
+ * main - entry point
+ * @ac: argc
+ * @av: argv
  * Return: 0 Success, 1 Failed
  */
 int main(int ac, char **av)
@@ -18,7 +18,7 @@ int main(int ac, char **av)
 		return (EXIT_FAILURE);
 	}
 
-	if (start_vars(&var) != 0)
+	if (set_gvars(&var) != 0)
 		return (EXIT_FAILURE);
 
 	var.file = fopen(av[1], "r");

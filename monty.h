@@ -45,14 +45,14 @@ typedef struct instruction_s
 
 
 /**
- * struct glob_var - golbal variables
- * @file: file name
- * @buff: Getline buffer
- * @tmp: Getline counter
- * @dict: instruction dictionary
- * @head: pointer to list
- * @line_number: Stores file current line
- * @MODE: Program configuration stack or queue
+ * struct gvars - golbal variables
+ * @file: name
+ * @buff: buffer
+ * @tmp: size
+ * @dict: dictionary
+ * @head: head
+ * @line_number: size
+ * @MODE: mode
  */
 typedef struct gvars
 {
@@ -68,7 +68,7 @@ typedef struct gvars
 
 extern vars var;
 
-int start_vars(vars *);
+int set_gvars(vars *);
 instruction_t *create_instructions();
 int call_funct(vars *, char *);
 void free_all(void);
