@@ -69,7 +69,7 @@ typedef struct gvars
 extern vars var;
 
 int start_vars(vars *);
-instruction_t *create_instru();
+instruction_t *create_instructions();
 int call_funct(vars *, char *);
 void free_all(void);
 int _isdigit(char *);
